@@ -224,13 +224,63 @@ public class Main {
         System.out.println();
 
         System.out.println(node1);
-         */
+
+
+
+
+
+
+        */
 
 
         // Linked Binary Search Tree test
         LinkedBinarySearchTree linkedBST = new LinkedBinarySearchTree();
-        linkedBST.InsertBST("1", 2);
+        linkedBST.InsertBST("8", 8);
+        linkedBST.InsertBST("5", 5);
+        linkedBST.InsertBST("10", 10);
+        linkedBST.InsertBST("3", 3);
+        linkedBST.InsertBST("7", 7);
+        linkedBST.InsertBST("14", 14);
+        linkedBST.InsertBST("2", 2);
+        linkedBST.InsertBST("4", 4);
+        linkedBST.InsertBST("6", 6);
+        linkedBST.InsertBST("9", 9);
+        linkedBST.InsertBST("11", 11);
+        linkedBST.InsertBST("16", 16);
 
+        System.out.println(linkedBST);
+        System.out.println();
+
+        // Search
+        System.out.println("Searched: " + linkedBST.SearchBST(3));
+        System.out.println();
+
+        System.out.println("Searched: " + linkedBST.SearchBST(1010101));
+        System.out.println();
+
+
+        // Delete
+        linkedBST.DeleteBST(3);
+        System.out.println(linkedBST);
+        System.out.println();
+
+        linkedBST.InsertBST("3", 3);
+        System.out.println(linkedBST);
+        System.out.println();
+
+
+        linkedBST.DeleteBST(10);
+        System.out.println(linkedBST);
+        System.out.println();
+
+        linkedBST.DeleteBST(14);
+        System.out.println(linkedBST);
+        System.out.println();
+
+
+        linkedBST.DeleteBST(3);
+        System.out.println(linkedBST);
+        System.out.println();
 
 
     }

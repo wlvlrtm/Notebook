@@ -2,6 +2,7 @@ package Tree;
 
 public class Node {
     int key;
+
     String data;
     Node left;
     Node right;
