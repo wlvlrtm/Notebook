@@ -1,4 +1,5 @@
-import Tree.LinkedTree;
+import Tree.LinkedBinarySearchTree;
+import Tree.LinkedBinaryTree;
 import Tree.Node;
 
 public class Main {
@@ -187,9 +188,10 @@ public class Main {
         System.out.println(linkedQueue);
          */
 
-        //
 
-        LinkedTree T = new LinkedTree();
+        // Linked Binary Tree test
+        /*
+        LinkedBinaryTree T = new LinkedBinaryTree();
 
         Node node7 = T.MakeBT(null, "D", null);
         Node node6 = T.MakeBT(null, "C", null);
@@ -215,12 +217,21 @@ public class Main {
 
         System.out.println();
 
-        T.AddBT("E", node7, node1);
-        T.AddBT("E2", node7, node1);
+        T.AddBT("E", node7, node1, "L");
+        T.AddBT("F", node7, node1, "R");
 
         T.PreOrder(node1);
         System.out.println();
 
         System.out.println(node1);
+         */
+
+
+        // Linked Binary Search Tree test
+        LinkedBinarySearchTree linkedBST = new LinkedBinarySearchTree();
+        linkedBST.InsertBST("1", 2);
+
+
+
     }
 }

@@ -1,6 +1,6 @@
 package Tree;
 
-public class LinkedTree {
+public class LinkedBinaryTree {
     private Node preNode = null;
 
     public Node MakeBT(Node btL, String data, Node btR) {   // 신규 노드 생성
@@ -54,9 +54,18 @@ public class LinkedTree {
     }
 
 
-    public void AddBT(String addData, Node pre, Node root) {    // 말단 노드 추가; (추가할 데이터, 부모 노드, 루트)
+    public void AddBT(String addData, Node pre, Node root, String dir) {    // 말단 노드 추가; (추가할 데이터, 부모 노드, 루트, 좌/우)
         Node addNode = MakeBT(null, addData, null);         // 신규 노드 생성
         SearchBT(root, pre.data);                                   // 부모 노드 탐색; (루트;전체 트리, 부모 노드의 데이터)
-        this.preNode.left = addNode;                                // 추출한 부모 노드의 왼쪽 서브 트리에 신규 노드 추가; (덮어쓰기)
+
+        if (dir.equals("L")) {
+            this.preNode.left = addNode;                                // 추출한 부모 노드의 왼쪽 서브 트리에 신규 노드 추가; (덮어쓰기)
+        }
+        else if(dir.equals("R")) {
+            this.preNode.right = addNode;
+        }
+        else {
+            System.out.println("ERROR: Wrong Dir");
+        }
     }
 }
