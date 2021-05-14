@@ -15,6 +15,7 @@ public class LinkedBinarySearchTree {
                 p = p.right;         // 오른쪽 서브 트리 이동
             }
             else {                   // 탐색 성공
+                System.out.println("data: " + p.data + " key: " + p.key);
                 return p;            // 찾은 노드 반환
             }
         }
@@ -67,7 +68,7 @@ public class LinkedBinarySearchTree {
         }
     }
 
-
+/*
     // 이진 탐색 트리 삭제 연산
     public void DeleteBST(int key) {
         Node p = this.root;
@@ -91,7 +92,6 @@ public class LinkedBinarySearchTree {
                             break;
                         }
                         else {                   // 말단 노드가 우측에 있을 경우,
-                            System.out.println("!");
                             q.right = null;
                             break;
                         }
@@ -142,7 +142,13 @@ public class LinkedBinarySearchTree {
                         break;
                     }
                     else {  // 말단 노드가 아닌 경우; 자식 노드가 1개인 경우
-                        q = p.right;
+
+                        if (p.right != null) {  // p가 우측 자식 노드를 가지고 있으면,
+                            q = p.right;
+                        }
+                        else {
+                            q = p.left;
+                        }
 
                         if (q.left != null && q.right != null) {    // 상속 노드의 자식 노드가 2개인 경우
                             p.data = q.data;
@@ -167,11 +173,17 @@ public class LinkedBinarySearchTree {
 
                             q.right = null;
                         }
-                        else {
+                        else {  // 상속 노드가 말단 노드일 경우
+                            p.data = q.data;
+                            p.key = q.key;
 
+                            if (p.left != null) {   // q가 왼쪽이면,
+                                p.left = null;
+                            }
+                            else {
+                                p.right = null;
+                            }
                         }
-
-
                         break;
                     }
                 }
@@ -186,7 +198,7 @@ public class LinkedBinarySearchTree {
             }
         }
     }
-
+*/
 
     @Override
     public String toString() {

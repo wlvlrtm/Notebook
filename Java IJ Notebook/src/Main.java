@@ -247,41 +247,18 @@ public class Main {
         linkedBST.InsertBST("9", 9);
         linkedBST.InsertBST("11", 11);
         linkedBST.InsertBST("16", 16);
+        linkedBST.InsertBST("test", 30);
 
         System.out.println(linkedBST);
         System.out.println();
+
+        int[] L = {8, 5, 10, 3, 7, 14, 2, 4, 6, 9, 11, 16, 30};
+
+
 
         // Search
-        System.out.println("Searched: " + linkedBST.SearchBST(3));
-        System.out.println();
-
-        System.out.println("Searched: " + linkedBST.SearchBST(1010101));
-        System.out.println();
-
-
-        // Delete
-        linkedBST.DeleteBST(3);
-        System.out.println(linkedBST);
-        System.out.println();
-
-        linkedBST.InsertBST("3", 3);
-        System.out.println(linkedBST);
-        System.out.println();
-
-
-        linkedBST.DeleteBST(10);
-        System.out.println(linkedBST);
-        System.out.println();
-
-        linkedBST.DeleteBST(14);
-        System.out.println(linkedBST);
-        System.out.println();
-
-
-        linkedBST.DeleteBST(3);
-        System.out.println(linkedBST);
-        System.out.println();
-
-
+        for (int i = 0; i < L.length; i++) {
+            System.out.println("Searched: " + linkedBST.SearchBST(L[i]));
+        }
     }
 }
