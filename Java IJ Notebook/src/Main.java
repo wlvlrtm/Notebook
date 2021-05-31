@@ -1,3 +1,5 @@
+import Sort.BubbleSort;
+import Sort.SelectionSort;
 import Tree.LinkedBinarySearchTree;
 import Tree.LinkedBinaryTree;
 import Tree.Node;
@@ -234,6 +236,7 @@ public class Main {
 
 
         // Linked Binary Search Tree test
+        /*
         LinkedBinarySearchTree linkedBST = new LinkedBinarySearchTree();
         linkedBST.InsertBST("8", 8);
         linkedBST.InsertBST("5", 5);
@@ -254,11 +257,26 @@ public class Main {
 
         int[] L = {8, 5, 10, 3, 7, 14, 2, 4, 6, 9, 11, 16, 30};
 
-
-
-        // Search
         for (int i = 0; i < L.length; i++) {
             System.out.println("Searched: " + linkedBST.SearchBST(L[i]));
         }
+        */
+
+
+        // Selection Sort
+        /*
+        int[] arr = {69, 10, 30, 2, 16, 8, 31, 22};
+        SelectionSort sort = new SelectionSort(arr);
+        */
+
+        // Bubble Sort
+        int[] arr = {69, 10, 30, 2, 16, 8, 31, 22};
+        BubbleSort sort = new BubbleSort(arr);
+
+
+
+
+
+
     }
 }
