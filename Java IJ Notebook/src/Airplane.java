@@ -1,24 +1,31 @@
 public class Airplane {
-    // 필드
+    //필드
+    private String ID;       // 식별 번호
     private String Company;  // 제조 회사
-    private String Type;     // 타입 정보
-    private String ID;       // 식별 정보
+    private int Passenger;  // 탑승 인원
 
     // 생성자
-    public Airplane(String Company, String Type, String ID) {
-        this.Company = Company;
-        this.Type = Type;
+    public Airplane(String ID, String Company, int Passenger) {
         this.ID = ID;
+        this.Company = Company;
+        this.Passenger = Passenger;
     }
 
     // 메소드
-    public String getCompany() {
-        return this.Company;
-    }
-    public String getType() {
-        return this.Type;
-    }
     public String getID() {
         return this.ID;
     }
+    public String getCompany() {
+        return this.Company;
+    }
+    public int getPassenger() {
+        return this.Passenger;
+    }
+
+    @Override
+    public String toString() {
+        return  ID + " " + Company + " " + Passenger;
+    }
 }
+
+
