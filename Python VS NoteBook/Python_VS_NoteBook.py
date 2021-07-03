@@ -70,7 +70,7 @@ while(len(list_T) > 0 or len(list_S) > 0) :
 ## 결과 출력
 print()
 for i in range(0, count_T) :
-    print(i+1, "팀 || 선생: ", result[i][0], "        학생: ", result[i][1])
+    print(i+1, "팀 || 선생: ", sorted(result[i][0]), "        학생: ", sorted(result[i][1]))
     
 
 
