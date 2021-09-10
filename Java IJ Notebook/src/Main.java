@@ -15,7 +15,5 @@ public class Main {
         System.out.println();
 
         System.out.println("통합 리스트: " + cal.getListR());
-
-
     }
 }
