@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src"
   ],
-  "SelectedNode": "\\RandomRoulette.py",
+  "SelectedNode": "\\src\\Bsearch.py",
   "PreviewInSolutionExplorer": false
 }
