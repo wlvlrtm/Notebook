@@ -15,8 +15,8 @@ def bubble_sort(a: MutableSequence) -> None :
     for j in range(n-1, k, -1) :   ## n-1 ~ k, -1;
       for m in range(0, n-1) :   ## 0 ~ n-2; 패스 반복 과정 출력
         print(f"{a[m]:2}" + ("  " if (m != j-1) else (" +" if (a[j-1] > a[j]) else " -")), end="")
-
       print(f"{a[n-1]:2}")
+
       ccnt += 1                 ## 비교 횟수 += 1
 
       if (a[j-1] > a[j]) :   ## (앞 수 > 주목한 수); 대소 관계 비교
@@ -29,8 +29,8 @@ def bubble_sort(a: MutableSequence) -> None :
 
     for m in range(0, n-1) :   ## 0 ~ n-2; 패스 반복 과정 출력 (마지막 1줄)
       print(f"{a[m]:2}", end="  ")
-
     print(f"{a[n-1]:2}")
+
     ps += 1     ## 패스 넘버 += 1
 
     if (exchng == 0): ## 교환이 1번도 발생하지 않았다면,
